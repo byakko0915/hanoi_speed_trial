@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ハノイの塔スピードチャレンジ</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h1>ハノイの塔スピードチャレンジ</h1>
+        <h2>塔の高さ</h2>
+        <div class="start">
+            <input type="number" id="height" min="1" max="64" value="5" oninput="fixHeightInput()">
+            <button id="generate" onclick="startHanoi()">スタート</button>
+            <button id="generate" onclick="endHanoi()">完成</button>
+            <div id="timeCount">00:00:00.000</div>
+        </div>
+        <div class="container" id="container">
+            <div id="tower1"></div>
+            <div id="tower2"></div>
+            <div id="tower3"></div>
+        </div>
+        <div class="buttons">
+            <div>
+                <button class="button" style="visibility: collapse;" onclick="">1</button>
+                <button class="button" onclick="moveDisk(1, 2)">2</button>
+                <button class="button" onclick="moveDisk(1, 3)">3</button>
+            </div>
+            <div>
+                <button class="button" onclick="moveDisk(2, 1)">1</button>
+                <button class="button" style="visibility: collapse;" onclick="">2</button>
+                <button class="button" onclick="moveDisk(2, 3)">3</button>
+            </div>
+            <div>
+                <button class="button" onclick="moveDisk(3, 1)">1</button>
+                <button class="button" onclick="moveDisk(3, 2)">2</button>
+                <button class="button" style="visibility: collapse;" onclick="">3</button>
+            </div>
+        </div>
+        <p style="color: gray; margin-top: 25%; text-align: center;">スピードチャレンジと銘打ってはいますが、今のところタイマーは動きませんし完成時の動作も実装していません<br>そしておそらく私はこのサイトを更新しません...</p>
+        <script type="text/javascript" src="main.js"></script>
+        <p style="color: gray; margin-top: 1em; text-align: center; font-size: small;">Idea by <a href="https://youtu.be/M839X6icAnA?si=4Dwb4oiFx-jy9mWK">QuizKnock会議中</a></p>
+    </body>
+</html>
